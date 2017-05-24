@@ -1,6 +1,6 @@
-- Install nodejs (npm come with it)
+- Install nodejs (npm comes with it)
 - Install cli -> npm install -g @angular/cli
-- in the Folder -> npm install (dl all node_modules)
+- in the folder -> npm install (dl all node_modules)
 - ng serve
 
 
