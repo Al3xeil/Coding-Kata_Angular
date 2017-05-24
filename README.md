@@ -1,28 +1,24 @@
-# OscarAngular
+- Install nodejs (npm come with it)
+- Install cli -> npm install -g @angular/cli
+- in the Folder -> npm install (dl all node_modules)
+- ng serve
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
-## Development server
+Kata Übungen:
+- home Seite mit AuthGuard schützen
+- Register Knopf neben dem Login Knopf hinzufügen -> routerLink auf "/register"
+- In register.component.ts -> in der Funktion "register" -> userService.create aufrufen (nicht subscribe vergessen)
+- in dem app.routing Datei -> path: 'kompetenzpflege' hinzufügen
+- Komponenten "Suche" und "Sidemenu" hinzufügen -> Als Child von "kompetenzpflege" in dem Router
+- Suche testen -> etwas fehtl -> Debug nötig
+- Wenn man auf einem Knopf in dem Sidemenu click sollte sich die Tabelle in der Mitte aktualisieren
+	-> Gleiche System wie mit der Suche
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- routing auf kompetenz/:id -> KompetenzComponent
+- Typ-Combobox auffüllen und richtig selektieren
+- Rating : 
+<star-rating-comp [starType]="'svg'" [hoverEnabled]="true" [rating]="" (onClick)="onClick($event)"
+					[size]="'large'">
+</star-rating-comp> 
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+-> onClick Funktion erstellen -> sollte den User mit dem geänderten Rating speichern (put)
