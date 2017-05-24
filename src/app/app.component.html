@@ -1,0 +1,41 @@
+<nav class="navbar navbar-toggleable-md sticky-top navbar-light bg-inverse">
+   	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	 </button>
+     <a class="navbar-brand text-white" href="#">Oscarpitz</a>
+     <div class="collapse navbar-collapse" id="navbarNav">
+	     <ul class="navbar-nav mr-auto" >
+	        <li class="nav-item"><a class="nav-link text-muted" routerLink="home">Home</a></li>
+	        <li class="nav-item"><a class="nav-link text-muted" routerLink="profil">About</a></li>
+	        <li class="nav-item"><a class="nav-link text-muted" routerLink="kompetenzpflege">Kompetenzpflege</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li *ngIf="currentUser" class="nav-item"><b class="nav-link text-muted">Logged as {{currentUser.username}}</b></li>
+	      	<li class="nav-item"><a class="nav-link text-warning" [routerLink]="['/login']">Logout</a></li>
+	      </ul>
+     </div>
+</nav>
+ <div class="container-fluid">    
+  <div class="row content">
+	<div class="col-sm-2 col-md-auto">
+	 	<img [src]="LOGO" class="img-rounded" alt="opitz-Logo" width="150" height="75"> 
+	 </div>
+	<!-- main app container -->
+	 <div class="col-sm-8">
+	     <div class="col-sm-15 col-sm-offset-2">
+	         <alert></alert>
+	         <router-outlet></router-outlet>
+	     </div>
+	 </div>
+ </div>
+ </div>
+
+<!-- credits -->
+<div class="text-center footer navbar-fixed-bottom bg-inverse sticky-bottom">
+    <p class="text-muted">
+        Angular 2 User Registration and Login für Oscar 3
+    </p>
+    <p>
+        <a href="https://oscar.opitz-consulting.int:7003/" target="_top">Oscar 2</a>
+    </p>
+</div>

@@ -1,0 +1,10 @@
+<div id="search-component">
+  <h4>Competence Search</h4>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <div>
+    <div *ngFor="let competence of competences | async"
+         (click)="gotoDetail(project)" class="search-result" >
+      {{competence.name}}
+    </div>
+  </div>
+</div>

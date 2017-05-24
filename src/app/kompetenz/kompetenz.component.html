@@ -1,0 +1,39 @@
+<form #competenceForm="ngForm" (ngSubmit)="onSubmit()" *ngIf="competence">
+	<div class="form-header">
+		<h3>{{competence.name}}</h3>
+	</div>
+	<div class="form-body">
+		<div class="form-group">
+		  <label for="name">Name</label>
+		  <input type="text" class="form-control" id="name"
+		         required
+		         [(ngModel)]="competence.name" name="name"
+		         #name="ngModel">
+		  <div [hidden]="name.valid || name.pristine"
+	             class="alert alert-danger">
+	          Name is required
+	      </div>
+		</div>
+		<div class="form-group">
+		  <label for="name">Description</label>
+		  <input type="text" class="form-control" id="description"
+		         [(ngModel)]="competence.description" name="description"
+		         #name="ngModel">
+		</div>
+		<div class="form-group">
+		  <label for="status">Status</label>
+		  <select class="form-control" id="status" required [(ngModel)]="selectedStatus" name="status">
+		    <option *ngFor="let stat of status" [ngValue]="stat">{{stat.name}}</option>
+		  </select>
+		</div>
+		<div class="form-group">
+		  <label for="type">Type</label>
+		  <select class="form-control" id="type" required [(ngModel)]="selectedType" name="type">
+		    <option *ngFor="let typeElement of types" [ngValue]="typeElement">{{typeElement.name}}</option>
+		  </select>
+		</div>
+	</div>
+	<div class="form-footer">
+		<button type="submit" class="btn btn-primary" [disabled]="!competenceForm.form.valid">Save</button>
+	</div>
+</form>

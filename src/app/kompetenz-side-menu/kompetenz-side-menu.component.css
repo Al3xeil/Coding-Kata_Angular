@@ -1,0 +1,9 @@
+.table-fixed tbody {
+  height: 100px;
+  overflow-y: auto;
+  width: 90%;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+}

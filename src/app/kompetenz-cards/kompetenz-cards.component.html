@@ -1,0 +1,47 @@
+<div class="row">
+	<div *ngFor="let key of typKeys" class="col-sm-4">
+	    <h2>{{key}}</h2>
+	    <!-- <p><a class="btn btn-secondary" (click)="navigate(key)"  role="button">View details »</a></p> -->
+	    <table class="table table-bordered table-hover">
+	      <thead>
+	        <tr>
+	          <th>Name</th>
+	          <th>Beschreibung</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr *ngFor="let competence of competenceListMapForType.get(key)">
+	          <td width="50%">{{competence.competence.name}}</td>
+	          <td width="50%">{{competence.competence.description}}</td>
+	        </tr>
+	      </tbody>
+	    <!--<ul class="list-group checked-list-box">
+	        <li *ngFor="let projectIte of projects"
+	            class="list-group-item"
+	            data-style="button"
+	            [class.selected]="projectIte === selectedProject"
+	            (click)="onSelect(projectIte)">
+	          {{projectIte.name}}
+	        </li>
+	    </ul> -->
+	    </table>
+	</div>
+</div>
+
+<!-- <div class="row">
+	<div class="col-sm-4">
+	    <h2>Branchenkenntnisse</h2>
+	    <p>...</p>
+	    <p><a class="btn btn-secondary" (click)="navigate('branchenkenntnisse')"  role="button">View details »</a></p>
+	</div>
+	<div class="col-sm-4">
+	    <h2>Projektlebenzyklus</h2>
+	    <p>... </p>
+	    <p><a class="btn btn-secondary" (click)="navigate('projektlebenzyklus')" role="button">View details »</a></p>
+	</div>
+	<div class="col-sm-4">
+	    <h2>Fremd/Mutter-sprachen</h2>
+	    <p>... </p>
+	    <p><a class="btn btn-secondary" (click)="navigate('sprachen')" role="button">View details »</a></p>
+	</div>
+</div> -->

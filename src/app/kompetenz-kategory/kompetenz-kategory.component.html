@@ -1,0 +1,14 @@
+<table class="table table-bordered table-hover" *ngIf="competences">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Beschreibung</th>
+        </tr>
+      </thead>
+      <tbody>	
+        <tr *ngFor="let competence of competences" (click)="gotoDetail(competence.competence)">
+          <td width="50%">{{competence.competence.name}}</td>
+          <td width="50%">{{competence.competence.description}}</td>
+        </tr>
+      </tbody>
+</table>
